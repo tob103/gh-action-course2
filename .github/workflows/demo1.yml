@@ -15,5 +15,6 @@ jobs:
       - name: Run tests
         run: echo "Running tests..."
       - name: Output event data
-        run: echo "Event data: ${{ toJson(github.event) }}"
+        run: |
+          echo "Event data: ${{ toJson(github.event) }}"
 
