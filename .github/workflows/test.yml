@@ -12,8 +12,10 @@ jobs:
           node-version: 18
       - name: Install dependencies
         run: npm install
+        working-directory: second-action
       - name: Run tests
         run: npm test
+        working-directory: second-action
   deploy: 
     runs-on: ubuntu-latest
     needs: test
