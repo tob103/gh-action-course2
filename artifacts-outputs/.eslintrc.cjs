@@ -2,7 +2,6 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    'vitest/globals': true,
   },
   extends: [
     'eslint:recommended',
@@ -22,6 +21,11 @@ module.exports = {
     react: {
       version: '18.2.0',
     },
+  },
+  globals: {
+    describe: 'readonly',
+    it: 'readonly',
+    expect: 'readonly',
   },
   rules: {
     'react/react-in-jsx-scope': 'off',
